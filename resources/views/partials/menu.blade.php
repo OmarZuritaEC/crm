@@ -62,6 +62,16 @@
                     </ul>
                 </li>
             @endcan
+            @can('prueba_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.pruebas.index") }}" class="nav-link {{ request()->is('admin/pruebas') || request()->is('admin/pruebas/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
+
+                        </i>
+                        {{ trans('cruds.prueba.title') }}
+                    </a>
+                </li>
+            @endcan
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">

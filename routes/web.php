@@ -28,4 +28,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Audit Logs
     Route::resource('audit-logs', 'AuditLogsController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
+
+    // Pruebas
+    Route::delete('pruebas/destroy', 'PruebaController@massDestroy')->name('pruebas.massDestroy');
+    Route::resource('pruebas', 'PruebaController');
 });

@@ -80,6 +80,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => '18',
                 'title' => 'audit_log_access',
             ],
+            [
+                'id'    => '19',
+                'title' => 'prueba_create',
+            ],
+            [
+                'id'    => '20',
+                'title' => 'prueba_edit',
+            ],
+            [
+                'id'    => '21',
+                'title' => 'prueba_show',
+            ],
+            [
+                'id'    => '22',
+                'title' => 'prueba_delete',
+            ],
+            [
+                'id'    => '23',
+                'title' => 'prueba_access',
+            ],
         ];
 
         Permission::insert($permissions);
