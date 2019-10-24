@@ -6,11 +6,11 @@ use App\Traits\Auditable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Role extends Model
+class Prueba extends Model
 {
     use SoftDeletes, Auditable;
 
-    public $table = 'roles';
+    public $table = 'pruebas';
 
     protected $dates = [
         'created_at',
@@ -19,19 +19,9 @@ class Role extends Model
     ];
 
     protected $fillable = [
-        'title',
+        'name',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
-
-    public function users()
-    {
-        return $this->belongsToMany(User::class);
-    }
-
-    public function permissions()
-    {
-        return $this->belongsToMany(Permission::class);
-    }
 }
