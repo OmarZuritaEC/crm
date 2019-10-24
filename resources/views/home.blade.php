@@ -25,15 +25,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="{{ $settings2['column_class'] }}">
-                            <div class="card text-white bg-primary">
-                                <div class="card-body pb-0">
-                                    <div class="text-value">{{ number_format($settings2['total_number']) }}</div>
-                                    <div>{{ $settings2['chart_title'] }}</div>
-                                    <br />
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

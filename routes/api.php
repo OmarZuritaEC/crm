@@ -10,6 +10,16 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Users
     Route::apiResource('users', 'UsersApiController');
 
-    // Pruebas
-    Route::apiResource('pruebas', 'PruebaApiController');
+    // Crm Statuses
+    Route::apiResource('crm-statuses', 'CrmStatusApiController');
+
+    // Crm Customers
+    Route::apiResource('crm-customers', 'CrmCustomerApiController');
+
+    // Crm Notes
+    Route::apiResource('crm-notes', 'CrmNoteApiController');
+
+    // Crm Documents
+    Route::post('crm-documents/media', 'CrmDocumentApiController@storeMedia')->name('crm-documents.storeMedia');
+    Route::apiResource('crm-documents', 'CrmDocumentApiController');
 });

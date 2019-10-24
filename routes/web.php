@@ -29,7 +29,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Audit Logs
     Route::resource('audit-logs', 'AuditLogsController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
-    // Pruebas
-    Route::delete('pruebas/destroy', 'PruebaController@massDestroy')->name('pruebas.massDestroy');
-    Route::resource('pruebas', 'PruebaController');
+    // Crm Statuses
+    Route::delete('crm-statuses/destroy', 'CrmStatusController@massDestroy')->name('crm-statuses.massDestroy');
+    Route::resource('crm-statuses', 'CrmStatusController');
+
+    // Crm Customers
+    Route::delete('crm-customers/destroy', 'CrmCustomerController@massDestroy')->name('crm-customers.massDestroy');
+    Route::resource('crm-customers', 'CrmCustomerController');
+
+    // Crm Notes
+    Route::delete('crm-notes/destroy', 'CrmNoteController@massDestroy')->name('crm-notes.massDestroy');
+    Route::resource('crm-notes', 'CrmNoteController');
+
+    // Crm Documents
+    Route::delete('crm-documents/destroy', 'CrmDocumentController@massDestroy')->name('crm-documents.massDestroy');
+    Route::post('crm-documents/media', 'CrmDocumentController@storeMedia')->name('crm-documents.storeMedia');
+    Route::resource('crm-documents', 'CrmDocumentController');
 });
